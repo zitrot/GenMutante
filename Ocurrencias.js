@@ -2,7 +2,6 @@ let CountMutantes = 0;
 
 function Ocurrencias(CadenaGenes) {
     SiEsMutante = false;
-
     for (let i = 0; i < CadenaGenes.length; i++) {
 
         for (let j = 0; j < CadenaGenes.length; j++) {
@@ -101,22 +100,10 @@ function Ocurrencias(CadenaGenes) {
         }
 
     }
-
-    FilasIndicesMut = getUnique(FilasIndicesMut)
+    console.log(CountMutantes)
     return CountMutantes;
 }
 
-function getUnique(array) {
-    var uniqueArray = [];
-
-    // Loop through array values
-    for (var value of array) {
-        if (uniqueArray.indexOf(value) === -1) {
-            uniqueArray.push(value);
-        }
-    }
-    return uniqueArray;
-}
 
 function AuxiliarDiagonal(CadenaGenes, j, i) {
 
@@ -226,5 +213,4 @@ function AuxiliarColumnas(CadenaGenes, j, i) {
         return false;
     }
 }
-
 module.exports = Ocurrencias;
