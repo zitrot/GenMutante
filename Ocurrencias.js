@@ -45,12 +45,10 @@ function Ocurrencias(CadenaGenes) {
                     temp2i += 3;
                     SiEsMutante = false;
                 }
-                if (itemp == CadenaGenes.length) {
-                    break;
-                } else {
+                
                     //Variable que permite moverse en diagonal ya que se modifica al mismo tiempo que se modifica j
                     temp2i--;
-                }
+                
             } else {
 
                 SiEsMutante = AuxiliarDiagonal(CadenaGenes, temp2i, j);
