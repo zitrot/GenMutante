@@ -7,8 +7,14 @@ El algoritmo fue desarrollado utilizando javascript y node.js para el calculo de
 - El servicio GET /stats devuelve un JSON con estadisticas basicas de los cadenas de ADN previamente enviadas para procesarse y que fueron almacenados los resultados en una base de datos Dynamo.
 - https://7dx5ztm9oe.execute-api.us-east-2.amazonaws.com/Despliegue/stats
 
-- El servicio POST /mutant recibe un JSON que contiene la cadena de ADN a procesar y calcular los genes mutantes, el formato requrido para el JSON seria:
+- El servicio POST /mutant recibe un JSON que contiene la cadena de ADN a procesar y verificar si el ADN procede de un mutante o no, el formato requrido para el JSON seria:
   {“dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
   Tambien se debe tener en cuenta que la cantidad de caracteres por grupo de genes debe ser igual a la cantidad de item del array que contiene el JSON.
   
 - https://7dx5ztm9oe.execute-api.us-east-2.amazonaws.com/Despliegue/mutant
+
+## Resultados de las pruebas del codigo
+- Se realizó el code coverage del algoritmo principal para rectificar si mas el 80% de las lineas del codigo eran ejecutadas, por lo cual se obtuvo el siguiente resultado:
+
+![imagen](https://user-images.githubusercontent.com/32344442/110418336-646f4c80-8065-11eb-85b0-f1f1f143ba0b.png)
+
