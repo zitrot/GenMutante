@@ -61,11 +61,9 @@ function Ocurrencias(CadenaGenes) {
                     temp2i += 3;
                     SiEsMutante = false;
                 }
-                if (itemp == CadenaGenes.length) {
-                    break;
-                } else {
+
                     temp2i++;
-                }
+                
             }
 
         }
@@ -91,11 +89,8 @@ function Ocurrencias(CadenaGenes) {
                     temp2i += 3;
                     SiEsMutante = false;
                 }
-                if (itemp == CadenaGenes.length) {
-                    break;
-                } else {
                     temp2i--;
-                }
+                
 
             } else {
 
@@ -125,8 +120,6 @@ function AuxiliarDiagonal(CadenaGenes, j, i) {
         GCounter = 0,
         CCounter = 0,
         contadorCuatro = 4;
-    itemp = 0;
-    jtemp = 0;
     //En este while la funcion max() max permite saber si la i es mayor a la j o viceversa para luego ser comparada con el tamaño de la matriz
     //con el propocito de impedir que se acceda a una posicion inexistente
     while (Math.max(i, j) < CadenaGenes.length) {
@@ -140,8 +133,6 @@ function AuxiliarDiagonal(CadenaGenes, j, i) {
         j += 1;
         if (contadorCuatro == 0) break;
     }
-    itemp = i;
-    jtemp = j;
     //si alguna de las bases nitrogenadas a parece 4 veces en cada movimiento se retorna true ya que seria un gen mutante
     if (ACounter == 4 | TCounter == 4 | GCounter == 4 | CCounter == 4) {
 
@@ -158,8 +149,6 @@ function AuxiliarDiagonalInversa(CadenaGenes, j, i) {
         GCounter = 0,
         CCounter = 0,
         contadorCuatro = 4;
-    itemp = 0;
-    jtemp = 0;
     //En este while la funcion max() max permite saber si la i es mayor a la j o viceversa para luego ser comparada con el tamaño de la matriz
     //con el propocito de impedir que se acceda a una posicion inexistente, para lo cual tambien sirve la condicion en la que s eutiliza la funcion min()
     while (Math.max(i, j) < CadenaGenes.length && Math.min(i, j) >= 0) {
@@ -173,8 +162,6 @@ function AuxiliarDiagonalInversa(CadenaGenes, j, i) {
         j -= 1;
         if (contadorCuatro == 0) break;
     }
-    itemp = i;
-    jtemp = j;
     //si alguna de las bases nitrogenadas a parece 4 veces en cada movimiento se retorna true ya que seria un gen mutante
     if (ACounter == 4 | TCounter == 4 | GCounter == 4 | CCounter == 4) {
 
