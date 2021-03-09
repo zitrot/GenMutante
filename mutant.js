@@ -1,7 +1,8 @@
+/*Se trata del mismo algoritmo que esta en el archivo Ocurrencias.js pero adaptado para ser utilizado en una funcion lambda de AWS y hacer uso de DynamoDB*/
 "use strict";
 const AWS = require('aws-sdk');
 const docClient = new AWS.DynamoDB.DocumentClient();
-// Function to Create an Item to DB
+
 exports.handler = async (event) => {
     
   try {
@@ -36,7 +37,7 @@ exports.handler = async (event) => {
 
     }
     let temp2i = 0;
-    for (let i = ((CadenaGenes.length - 4) * -1); i < CadenaGenes.length - 4; i++) {
+    for (let i = ((CadenaGenes.length - 4) * -1); i <= CadenaGenes.length - 4; i++) {
         temp2i = i;
         for (let j = 0; j < CadenaGenes.length; j++) {
             if (i <= 0) {
@@ -104,7 +105,7 @@ exports.handler = async (event) => {
 
     }
     
-
+    //Se verifica si la cantidad de genes mutantes es mayor que 1, de ser asi se genera un id unico con la fecha y se almacena un el dato de que la persona es mutante en Dynamo
     if(CountMutantes > 1){
         let params = {
       TableName: table,
@@ -144,11 +145,11 @@ exports.handler = async (event) => {
   }
 
 
-  function generarId(shardId /* range 0-64 for shard/slot */) {
+  function generarId(shardId) {
   var CUSTOMEPOCH = 1300000000000;
-  var ts = new Date().getTime() - CUSTOMEPOCH; // limit to recent
+  var ts = new Date().getTime() - CUSTOMEPOCH;
   var randid = Math.floor(Math.random() * 512);
-  ts = (ts * 64);   // bit-shift << 6
+  ts = (ts * 64);
   ts = ts + shardId;
   return (ts * 512) + randid;
 }
