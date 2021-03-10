@@ -24,7 +24,7 @@ Si la cadena de ADN resulta ser de un mutante el POST request responderá con OK
 
 
 -Para el caso del GET request /stats solamente se debe ingresar la URL correctamente y al ejecutarla devolvera un JSON con las estadisticas de las cadenas de adn previamente procesadas
-![imagen](https://user-images.githubusercontent.com/32344442/110698725-0608b200-81bc-11eb-9d01-3ede1cb7fb73.png)
+![imagen](https://user-images.githubusercontent.com/32344442/110702598-bb3d6900-81c0-11eb-83e7-6ae97c07e42b.png)
 
 En la carpeta Pruebas_postman se encuentran dos archivos JSON que pueden ser utilizados para la hacer pruebas.
 
