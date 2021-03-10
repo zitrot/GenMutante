@@ -1,6 +1,6 @@
 # Prueba tecnica de verificación de ADN mutante
 
-El algoritmo fue desarrollado utilizando javascript y node.js para el calculo de los genes mutantes, se hizo uso tambien de las funciones lambda, API Gateway y DynamoDB de AWS para la creacion de una API Rest en la que se exposieran los servicios requeridos para el proyecto.
+El algoritmo fue desarrollado utilizando javascript y node.js para el calculo de los genes mutantes, se hizo uso tambien de las funciones lambda, API Gateway y DynamoDB de AWS para la creacion de una API Rest en la que se expusieran los servicios requeridos para el proyecto.
 
 ## Ejecucion del proyecto
 ## Se implementaron dos servicios que para ser utilizados se deben utilizar las siguientes URLs:
