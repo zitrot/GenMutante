@@ -13,8 +13,17 @@ El algoritmo fue desarrollado utilizando javascript y node.js para el calculo de
   
 - https://7dx5ztm9oe.execute-api.us-east-2.amazonaws.com/Despliegue/mutant
 
+
+## Pruebas de ejecucion en AWS
+- Para las pruebas de ejecución se tienen
+
+
+
 ## Resultados de las pruebas del codigo
 - Se realizó el code coverage del algoritmo principal para rectificar si mas el 80% de las lineas del codigo eran ejecutadas, por lo cual se obtuvo el siguiente resultado:
 
 ![imagen](https://user-images.githubusercontent.com/32344442/110418336-646f4c80-8065-11eb-85b0-f1f1f143ba0b.png)
+
+
+
 
