@@ -15,9 +15,31 @@ El algoritmo fue desarrollado utilizando javascript y node.js para el calculo de
 
 
 ## Pruebas de ejecucion en AWS
-- Para las pruebas de ejecución se tienen
+- Para las pruebas de ejecución con el proyecto en AWS se puede utiilizar el programa Postman de la siguiente forma:
+
+-En este ejemplo se tiene la url que apunta al POST request /mutant y al cual se dbe enviar un Json como se ve en la imagen. 
+![imagen](https://user-images.githubusercontent.com/32344442/110698352-8da1f100-81bb-11eb-8dda-b57a8d7e3c0e.png)
 
 
+-Para el caso del GET request /stats solamente se debe ingresar la URL correctamente y al ejecutarla devolvera un JSON con las estadisticas de las cadenas de adn previamente procesadas
+![imagen](https://user-images.githubusercontent.com/32344442/110698725-0608b200-81bc-11eb-9d01-3ede1cb7fb73.png)
+
+En la carpeta Pruebas_postman se encuentran dos archivos JSON que pueden ser utilizados para la hacer pruebas.
+
+## Pruebas de ejecucion locales
+- Para ejecutar las pruebas locales primero se debe instalar las depencencias requeridas en la ruta del proyecto utilizando el comando
+
+ npm install
+
+- Luego para configurar que cadena de adn se desea probar se debe entrar al archivo Ocurrencias.test.js y y ingresar la matriz como se muestra en la imagen.
+
+![imagen](https://user-images.githubusercontent.com/32344442/110700706-41a47b80-81be-11eb-802e-717ea1c8bdc3.png)
+
+La matriz se ingresa como parametro de la funcion Ocurrencias() y en la funcion .toBe() se ingresa la cantidad correcta de genes mutantes que el algoritmo deberia encontrar.
+
+- finalmente para ejecutar la prueba desde una consola se debe ingresar a la ruta del proyecto y ejecutar el comando
+
+npm run test
 
 ## Resultados de las pruebas del codigo
 - Se realizó el code coverage del algoritmo principal para rectificar si mas el 80% de las lineas del codigo eran ejecutadas, por lo cual se obtuvo el siguiente resultado:
