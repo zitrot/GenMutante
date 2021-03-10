@@ -20,7 +20,7 @@ El algoritmo fue desarrollado utilizando javascript y node.js para el calculo de
 -En este ejemplo se tiene la url que apunta al POST request /mutant y al cual se dbe enviar un Json como se ve en la imagen. 
 ![imagen](https://user-images.githubusercontent.com/32344442/110698352-8da1f100-81bb-11eb-8dda-b57a8d7e3c0e.png)
 
-Si la cadena de ADN resulta ser de un mutante el POST request responderá con OK-200 y en caso de que no sea mutante respondera con 403-FORBIDEN 
+Si la cadena de ADN resulta ser de un mutante el POST request responderá con OK-200 y en caso de que no sea mutante respondera con 403-FORBIDEN, En caso de no enviarse un JSON con la cadena de ADN en el request POST el servicio retornará por defecto el mensaje {"message":"Missing authentication Token"}
 
 
 -Para el caso del GET request /stats solamente se debe ingresar la URL correctamente y al ejecutarla devolvera un JSON con las estadisticas de las cadenas de adn previamente procesadas
